@@ -11,7 +11,6 @@ Havel-Hakimi has been applied, in order to do that, it should be added(Changing 
 using namespace std;
 
 vector<int> numberOfSequence(string input){
-    input = input.substr(1,input.length()-2);   //Erases the brackets {}
     input += ", ";          //It adds a comma in order to optimize the code (It doesn't have to distinguish if it is the last number)
     vector<int> numbers;
     while(input.length() > 1){  //While the string has values do this:
@@ -49,7 +48,7 @@ bool HavelHakimiAlgorithm(vector<int> graphicalSequence){
 
 int main(){
     string inputGraphicSequence;    //Creation of a string that is going to store the input by the user
-    cout << "Write the graphic sequence (Format: (x,x,x...))\n";    //Ask the user for the graphic sequence pending to evaluation
+    cout << "Write the graphic sequence (Format: x,x,x...)\n";    //Ask the user for the graphic sequence pending to evaluation
     cin >> inputGraphicSequence;
 
 //Creates a vector which contains the graphical sequence from bigger to lower and now they are integers
